@@ -32,4 +32,6 @@ html
 
 __screenshots__
 .vitest-attachments
-*.input.txt
+
+AOC
+input.txt
