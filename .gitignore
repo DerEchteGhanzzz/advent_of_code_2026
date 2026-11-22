@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.iml
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.github/
+
+.direnv
+.envrc
+flake.nix
+flake.lock
+
+report.xml
+coverage
+html
+
+__screenshots__
+.vitest-attachments
+*.input.txt
