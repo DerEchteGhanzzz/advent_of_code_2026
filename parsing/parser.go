@@ -1,7 +1,6 @@
 package parsing
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -12,7 +11,7 @@ func ParseFile(day string, isTest ...bool) string {
 	}
 	bytes, err := os.ReadFile(day + "/" + fileName)
 	if err != nil {
-		fmt.Print(err)
+		panic(err)
 	}
 	return string(bytes)
 }

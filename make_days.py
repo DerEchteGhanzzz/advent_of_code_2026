@@ -1,7 +1,7 @@
 import os
 
 content = """
-package %s
+package day%s
 
 import (
 	"strings"
@@ -24,7 +24,7 @@ for i in range(1, 13):
     dir = f'day{i}'
     os.mkdir(dir)
     with open(f'{dir}/day{i}.go', 'w') as f:
-        f.write(content.replace('%s', f'day{i}'))
+        f.write(content.replace('%s', str(i)))
     with open(f'{dir}/test-input.txt', 'w') as f:
         f.write('')
     with open(f'{dir}/input.txt', 'w') as f:

@@ -20,7 +20,7 @@ import (
 )
 
 func parseAndGo(day string, solveA func([]string) string, solveB func([]string) string) {
-	var input []string = strings.Split(parsing.ParseFile(day), "\n")
+	var input []string = strings.Split(parsing.ParseFile("day"+day), "\n")
 	if len(input) == 1 && len(input[0]) == 0 {
 		return
 	}

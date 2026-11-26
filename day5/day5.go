@@ -14,5 +14,5 @@ func solveB(input []string) string {
 }
 
 func Solve() (string, func([]string) string, func([]string) string) {
-	return "day5", func(input []string) string { return solveA(input) }, func(input []string) string { return solveB(input) }
+	return "5", func(input []string) string { return solveA(input) }, func(input []string) string { return solveB(input) }
 }
