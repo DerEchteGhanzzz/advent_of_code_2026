@@ -1,20 +1,31 @@
 import os
 
-content = """:- use_module('../io/reader', [read_file/2]).
-:- use_module('../io/writer', [print_list/1]).
+content = """
+package %s
 
-lines(Lines) :-
-	read_file('input.txt', RawLines),
-	maplist(string_codes, Lines, RawLines),
-	print_list(Lines).
+import (
+	"strings"
+)
+
+func solveA(input []string) string {
+	return strings.Join(input[:], "\\n")
+}
+
+func solveB(input []string) string {
+	return strings.Join(input[:], "\\n")
+}
+
+func Solve() (string, func([]string) string, func([]string) string) {
+	return "%s", func(input []string) string { return solveA(input) }, func(input []string) string { return solveB(input) }
+}
 """
 
 for i in range(1, 13):
-    dir = f'day_{i}'
+    dir = f'day{i}'
     os.mkdir(dir)
-    with open(f'{dir}/a.pl', 'w') as f:
-        f.write(content)
-    with open(f'{dir}/b.pl', 'w') as f:
-        f.write(content)
+    with open(f'{dir}/day{i}.go', 'w') as f:
+        f.write(content.replace('%s', f'day{i}'))
+    with open(f'{dir}/test-input.txt', 'w') as f:
+        f.write('')
     with open(f'{dir}/input.txt', 'w') as f:
         f.write('')
